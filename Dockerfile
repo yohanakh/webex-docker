@@ -16,7 +16,6 @@ RUN dpkg --add-architecture i386 && \
     sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 RUN apt-get install -y pulseaudio && echo enable-shm=no >> /etc/pulse/client.conf
-#RUN apt-get install -y pulseaudio alsa && apt-get clean
 
 COPY resources /root/resources/
 COPY install.sh /root/install.sh
