@@ -51,7 +51,7 @@ This will create a docker image named **WebexOnDocker1404**.
 First, start the docker container:
 
 ```bash
-docker run -d -p 2222:22 -v /run/user/$UID/pulse/native:/tmp/webexpulsesocket WebexOnDocker1404
+docker run -d -p 2222:22 -v /run/user/$UID/pulse/native:/tmp/webexpulsesocket --name WebexOnDocker WebexOnDocker1404
 ```
 
 Now you can run Firefox and start using Cisco WebEx:
@@ -61,5 +61,9 @@ Now you can run Firefox and start using Cisco WebEx:
 ssh root@localhost -p 2222 -X startfirefox
 ```
 
+Remember to stop/remove the docker container once you finish:
 
+```bash
+docker rm -f WebexOnDocker
+```
 # Enjoy!
