@@ -1,6 +1,6 @@
 # Overview
 
-An Ubuntu 14.04 based docker image for running Cisco WebEx on 64-bit linux systems.
+An Ubuntu 14.04 based docker image for running Cisco WebEx on 64-bit Linux systems.
 
 # Preparations
 
