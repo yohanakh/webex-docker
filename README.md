@@ -48,7 +48,13 @@ This will create a docker image named **WebexOnDocker1404**.
 
 # Running Cisco WebEx
 
-First, start the docker container:
+First, enable accessing the X Server from any host:
+```bash
+xhost +
+> access control disabled, clients can connect from any host
+```
+
+Then, start the docker container:
 
 ```bash
 docker run -d -p 2222:22 -v /run/user/$UID/pulse/native:/tmp/webexpulsesocket --name WebexOnDocker WebexOnDocker1404
@@ -66,4 +72,5 @@ Remember to stop/remove the docker container once you finish:
 ```bash
 docker rm -f WebexOnDocker
 ```
+
 # Enjoy!
