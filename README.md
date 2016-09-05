@@ -40,16 +40,16 @@ Next, place the *jre-8u91-linux-i586.tar.gz* and *firefox-45.0.tar.bz2* in the *
 From the root directory (where Dockerfile is located) run the following command:
 
 ```bash
-docker build -t WebexOnDocker1404 .
+docker build -t webexondocker1404 .
 ```
 
-This will create a docker image named **WebexOnDocker1404**.
+This will create a docker image named **webexondocker1404**.
 
 
 # Running Cisco WebEx
 
 First, enable accessing the X Server from any host:
-```bash
+```bashwe
 xhost +
 > access control disabled, clients can connect from any host
 ```
@@ -57,7 +57,7 @@ xhost +
 Then, start the docker container:
 
 ```bash
-docker run -d -p 2222:22 -v /run/user/$UID/pulse/native:/tmp/webexpulsesocket --name WebexOnDocker WebexOnDocker1404
+docker run -d -p 2222:22 -v /run/user/$UID/pulse/native:/tmp/webexpulsesocket --name WebexOnDocker webexondocker1404
 ```
 
 Now you can run Firefox and start using Cisco WebEx:
